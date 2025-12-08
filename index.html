@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – Jarosław Wabich</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page">
+  <header class="header">
+    <div class="header__nav container">
+      <div class="header__brand">
+        <span class="header__brand-mark">JW</span>
+        <span class="badge header__badge" id="badge-role"></span>
+      </div>
+      <nav class="header__links" aria-label="Główne">
+        <a class="header__link" href="#projekty">Projekty</a>
+        <a class="header__link" href="#umiejetnosci">Umiejętności</a>
+        <a class="header__link" href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app">
+    <section class="hero container">
+      <div class="hero__grid">
+        <div class="hero__card">
+          <p class="badge" id="hero-intro"></p>
+          <h1 id="hero-name"></h1>
+          <p id="hero-lead"></p>
+          <div class="buttons">
+            <a class="button" id="cta-primary" href="#projekty"></a>
+            <a class="button button--secondary" id="cta-cv" download></a>
+            <a class="button button--secondary" id="cta-contact" href="#kontakt"></a>
+          </div>
+        </div>
+        <div class="hero__card">
+          <h3 id="snapshot-title"></h3>
+          <p><strong id="snapshot-specialization"></strong></p>
+          <p><strong id="snapshot-domains"></strong></p>
+          <div id="hero-pills"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="projekty" aria-labelledby="projekty-title">
+      <div class="section__head">
+        <div>
+          <p class="badge" id="projekty-badge"></p>
+          <h2 id="projekty-title"></h2>
+        </div>
+        <p class="section__subtitle" id="projekty-subtitle"></p>
+      </div>
+      <div class="section__grid" id="projects-grid"></div>
+    </section>
+
+    <section class="section container" id="umiejetnosci" aria-labelledby="umiejetnosci-title">
+      <div class="section__head">
+        <div>
+          <p class="badge" id="umiejetnosci-badge"></p>
+          <h2 id="umiejetnosci-title"></h2>
+        </div>
+        <p class="section__subtitle" id="umiejetnosci-subtitle"></p>
+      </div>
+      <div class="section__grid" id="skills-grid"></div>
+    </section>
+
+    <section class="section container" id="doswiadczenie" aria-labelledby="doswiadczenie-title">
+      <div class="section__head">
+        <div>
+          <p class="badge" id="doswiadczenie-badge"></p>
+          <h2 id="doswiadczenie-title"></h2>
+        </div>
+        <p class="section__subtitle" id="doswiadczenie-subtitle"></p>
+      </div>
+      <div class="card">
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <section class="section container" id="bonus" aria-labelledby="bonus-title">
+      <div class="section__head">
+        <div>
+          <p class="badge" id="bonus-badge"></p>
+          <h2 id="bonus-title"></h2>
+        </div>
+        <p class="section__subtitle" id="bonus-subtitle"></p>
+      </div>
+      <div class="section__grid" id="extras-grid"></div>
+    </section>
+
+    <section class="section container" id="kontakt" aria-labelledby="kontakt-title">
+      <div class="section__head">
+        <div>
+          <p class="badge" id="kontakt-badge"></p>
+          <h2 id="kontakt-title"></h2>
+        </div>
+        <p class="section__subtitle" id="kontakt-subtitle"></p>
+      </div>
+      <div class="section__grid section__grid--split">
+        <div class="card">
+          <h3>Dane kontaktowe</h3>
+          <p><strong>Email:</strong> <a id="contact-email" class="link link--accent"></a></p>
+          <p><strong>Telefon:</strong> <a id="contact-phone" class="link link--accent"></a></p>
+          <p><strong>Preferencje:</strong> <span id="contact-preferences"></span></p>
+          <div class="buttons">
+            <a class="button" id="contact-cta-mail"></a>
+            <a class="button button--secondary" id="contact-cta-projects" href="#projekty"></a>
+          </div>
+        </div>
+        <div class="card">
+          <h3 id="process-title"></h3>
+          <p id="process-body1"></p>
+          <p id="process-body2"></p>
+          <div id="process-pills"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <span id="footer-text"></span>
+    <span class="badge" id="footer-updated"></span>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
+
