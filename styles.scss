@@ -61,11 +61,15 @@ body.page {
     display: flex;
     align-items: center;
     gap: 10px;
+    display: none; 
+
+    @media (min-width: 768px) {
+      display: inline-block;
+    }
+
   }
 
   &__brand-mark { font-size: 18px; }
-
-  &__badge { }
 
   &__links {
     display: flex;
@@ -111,6 +115,22 @@ body.page {
     border-radius: 18px;
     padding: 20px;
     box-shadow: $shadow;
+
+    &-top {
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      @media (min-width: 768px) {
+        align-items: end;
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__image {
+    width: fit-content;
   }
 }
 

@@ -49,6 +49,12 @@ body.page {
   display: flex;
   align-items: center;
   gap: 10px;
+  display: none;
+}
+@media (min-width: 768px) {
+  .header__brand {
+    display: inline-block;
+  }
 }
 .header__brand-mark {
   font-size: 18px;
@@ -92,6 +98,21 @@ body.page {
   border-radius: 18px;
   padding: 20px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+.hero__card-top {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .hero__card-top {
+    align-items: end;
+    flex-direction: row;
+  }
+}
+.hero__image {
+  width: fit-content;
 }
 
 .section {
