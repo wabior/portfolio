@@ -112,7 +112,7 @@ body.page {
 }
 .section__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
 .section__grid--split {
@@ -170,6 +170,7 @@ body.page {
   object-fit: cover;
   height: 180px;
   border: 1px solid #1f2937;
+  margin-bottom: 12px;
 }
 
 .pill {
@@ -186,7 +187,7 @@ body.page {
 }
 
 .link {
-  color: #e2e8f0;
+  color: #22d3ee;
   text-decoration: none;
 }
 .link--accent {

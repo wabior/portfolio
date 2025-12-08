@@ -28,20 +28,19 @@
     <section class="hero container">
       <div class="hero__grid">
         <div class="hero__card">
-          <p class="badge" id="hero-intro"></p>
-          <h1 id="hero-name"></h1>
-          <p id="hero-lead"></p>
+          <div style="display: flex; gap: 20px; align-items: end;">
+            <div>
+              <p class="badge" id="hero-intro"></p>  
+              <h1 id="hero-name"></h1>
+              <p id="hero-lead"></p>
+            </div>
+            <img src="img/face.png" alt="">
+          </div>
           <div class="buttons">
             <a class="button" id="cta-primary" href="#projekty"></a>
             <a class="button button--secondary" id="cta-cv" download></a>
             <a class="button button--secondary" id="cta-contact" href="#kontakt"></a>
           </div>
-        </div>
-        <div class="hero__card">
-          <h3 id="snapshot-title"></h3>
-          <p><strong id="snapshot-specialization"></strong></p>
-          <p><strong id="snapshot-domains"></strong></p>
-          <div id="hero-pills"></div>
         </div>
       </div>
     </section>
@@ -66,6 +65,19 @@
         <p class="section__subtitle" id="umiejetnosci-subtitle"></p>
       </div>
       <div class="section__grid" id="skills-grid"></div>
+    </section>
+
+    <section class="section container" id="education" aria-labelledby="wyksztalcenie-title">
+      <div class="section__head">
+        <div>
+          <p class="badge" id="education-badge"></p>
+          <h2 id="education-title"></h2>
+        </div>
+        <p class="section__subtitle" id="education-subtitle"></p>
+      </div>
+      <div class="card">
+        <div class="timeline" id="edu-timeline"></div>
+      </div>
     </section>
 
     <section class="section container" id="doswiadczenie" aria-labelledby="doswiadczenie-title">

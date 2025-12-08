@@ -134,7 +134,7 @@ body.page {
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 14px;
 
     &--split {
@@ -195,6 +195,7 @@ body.page {
     object-fit: cover;
     height: 180px;
     border: 1px solid $border;
+    margin-bottom: 12px;
   }
 }
 
@@ -212,7 +213,7 @@ body.page {
 }
 
 .link {
-  color: $text;
+  color: $accent;
   text-decoration: none;
 
   &--accent {

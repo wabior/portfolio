@@ -60,7 +60,7 @@ const populateProjects = (projects) => {
             (p) => `
     <article class="card">
       <img src="${p.image}" alt="Projekt ${p.name}" loading="lazy" />
-      <h3>${p.name}</h3>
+      <h3><a href="https://${p.name}" class="link">${p.name}</a></h3>
       <p><strong>${p.period}</strong></p>
       <p>${p.description}</p>
       <div>${renderPills(p.tags)}</div>
@@ -105,6 +105,29 @@ const populateExperience = (experience) => {
     }
 
     timeline.innerHTML = experience.items
+        .map(
+            (e) => `
+    <div class="timeline__item">
+      <h3>${e.title} • <span class="accent">${e.years}</span></h3>
+      <p><strong>${e.role}</strong></p>
+      <p>${e.details}</p>
+    </div>
+  `,
+        )
+        .join('');
+};
+
+const populateEducation = (education) => {
+    setText('education-badge', education.titleBadge);
+    setText('education-title', education.title);
+    setText('education-subtitle', education.subtitle);
+
+    const timeline = document.getElementById('edu-timeline');
+    if (!timeline) {
+        return;
+    }
+
+    timeline.innerHTML = education.items
         .map(
             (e) => `
     <div class="timeline__item">
@@ -209,6 +232,7 @@ const init = (content) => {
     populateProjects(content.projects);
     populateSkills(content.skills);
     populateExperience(content.experience);
+    populateEducation(content.education);
     populateExtras(content.extras);
     populateContact(content.contact);
     populateFooter(content.meta);
