@@ -220,7 +220,7 @@ const siteContent = {
         email: 'jaroslawwabichit@gmail.com',
         phone: '+48 888 786 401',
         preferences:
-            'projekty B2B, możliwość pracy zdalnej, środowiska Linux/Docker.',
+            'projekty B2B, możliwość pracy stacjonarnej u klienta, środowiska Linux/Docker.',
         ctaMail: 'Napisz maila',
         ctaProjects: 'Przejrzyj projekty'
     }
