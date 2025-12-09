@@ -173,7 +173,7 @@ const siteContent = {
         titleBadge: 'Papier',
         title: 'Wykształcenie',
         subtitle:
-            'inżynier informatyk',
+            'Drugi raz nie poszedłbym na studia.',
         items: [
             {
                 title: 'Wyższe',
@@ -195,23 +195,18 @@ const siteContent = {
         titleBadge: 'Dodatki portfolio',
         title: 'Na czasie',
         subtitle:
-            'Sekcje mile widziane w portfolio: usługi, proces pracy i mini case studies.',
+            '',
         items: [
             {
-                title: 'Usługi, które mogę dowieźć',
-                body: 'Nowe funkcjonalności w monolicie, refaktoryzacje do PHP 8.2, integracje z zewnętrznymi systemami, naprawy błędów produkcyjnych.',
+                title: 'Jak pracowałem',
+                body: 'Pracowałem w różnych zespołach SCRUM`owych, składających się z deweloperów (programiści, testerzy, graficy), czasem był lider. Sprinty 1-2 tyg., refinement założeń z biznesem, sprint review czyli pokazanie rezultatów na żywo interesariuszom.',
                 image:
                     'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80'
             },
             {
-                title: 'Jak pracuję',
-                body: 'Refinement z PO, rozbicie na zadania w Jira, krótki feedback loop z QA, małe PR-y i code review, dbanie o logi i obsługę błędów.',
-                image:
-                    'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80'
-            },
-            {
-                title: 'Mini case study: refactor',
-                body: 'Migracja kodu z PHP 7.4 do 8.2 i uporządkowanie namespace w dużej bazie kodu – redukcja legacy i łatwiejsze autoloading.',
+                title: 'Typowa rutyna',
+                body: `Migracja kodu z PHP 7.4 do 8.2 i uporządkowanie namespace w dużej bazie kodu – redukcja legacy i łatwiejsze autoloading.
+                development zadań z Jiry, deployment kodu na środowisko testowe, współpraca z QA przy poprawkach błędów, hotfixy, kontakt z biznesem np w celu negocjacji okrojenia założeń aby zdążyć z wydaniem na czas.`,
                 image:
                     'https://images.unsplash.com/photo-1523475472560-d2df97ec485c?auto=format&fit=crop&w=900&q=80'
             }
@@ -221,17 +216,11 @@ const siteContent = {
         titleBadge: 'Kontakt',
         title: 'Porozmawiajmy',
         subtitle:
-            'Najchętniej o backendzie w PHP/CakePHP i projektach z jasnym zakresem.',
+            'Najchętniej o projektach z jasnym zakresem.',
         email: 'jaroslawwabichit@gmail.com',
         phone: '+48 888 786 401',
         preferences:
             'projekty B2B, możliwość pracy zdalnej, środowiska Linux/Docker.',
-        processTitle: 'Krótko o procesie',
-        processBody1:
-            'Pracowałem w zespołach z testerami, liderem i Product Ownerem. Sprinty 1-2 tyg., refinement backlogu, review, demo dla interesariuszy.',
-        processBody2:
-            'Typowe zadania: development z Jiry, wrzutki na test, współpraca z QA przy poprawkach, hotfixy, kontakt z biznesem.',
-        processPills: ['SCRUM', 'Code Review', 'Hotfix-ready', 'QA cooperation'],
         ctaMail: 'Napisz maila',
         ctaProjects: 'Przejrzyj projekty'
     }

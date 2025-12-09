@@ -28,17 +28,17 @@ const populateHero = (hero, meta) => {
     setHTML('hero-pills', renderPills(hero.pills));
 
     const ctaPrimary = document.getElementById('cta-primary');
-    const ctaCv = document.getElementById('cta-cv');
+    // const ctaCv = document.getElementById('cta-cv');
     const ctaContact = document.getElementById('cta-contact');
 
     if (ctaPrimary) {
         ctaPrimary.textContent = hero.ctaPrimary.label;
         ctaPrimary.href = hero.ctaPrimary.href;
     }
-    if (ctaCv) {
-        ctaCv.textContent = hero.ctaCv.label;
-        ctaCv.href = hero.ctaCv.href;
-    }
+    // if (ctaCv) {
+    //     ctaCv.textContent = hero.ctaCv.label;
+    //     ctaCv.href = hero.ctaCv.href;
+    // }
     if (ctaContact) {
         ctaContact.textContent = hero.ctaContact.label;
         ctaContact.href = hero.ctaContact.href;
