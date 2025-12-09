@@ -11,7 +11,10 @@ const siteContent = {
         name: 'Jarosław Wabich',
         lead: `Full Stack PHP Developer z doświadczeniem w budowaniu i utrzymaniu dużych aplikacji webowych.
             Pracuję w modelu B2B od 2021 r. Specjalizuję się w PHP 8.x, analizie istniejącego kodu legacy
-            na potrzeby refactoru lub dodania nowych funkcji. Mam doświadczenie w integracji systemów poprzez REST API.`,
+            na potrzeby refactoru lub dodania nowych funkcji. Mam doświadczenie w integracji systemów poprzez REST API.
+            Samodzielnie rozwiązałem setki problemów związanych z błędami produkcyjnymi i ich diagnostyką.
+            Ściśle współpracowałem  z biznesem, jasno tłumacząc skomplikowane zagadnienia techniczne, jak również zbierałem niejasne wymagania biznesowe 
+            i tłumaczyłem je na język techniczny.`,
         ctaPrimary: {label: 'Zobacz projekty', href: '#projekty'},
         ctaCv: {label: 'Pobierz CV (md)', href: 'cv.md'},
         ctaContact: {label: 'Porozmawiajmy', href: '#kontakt'},
@@ -94,18 +97,22 @@ const siteContent = {
                 icon: '💻',
                 items: [
                     'Czyste PHP OOP (interfejsy, dziedziczenie, traity)',
-                    'CakePHP / MVC / serwisy + DI',
-                    'Laravel (dyplom, side projekty)',
-                    'MySQL: migracje, złożone zapytania, indeksy'
+                    'Znajomość podejścia MVC - Model, View, Controller',
+                    'Znajomość podejścia frameworkowego (rozwinięcie MVC o serwisy i Dependency Injection, ORM, routing)',
+                    'Frameworki: CakePHP i Laravel (praca dyplomowa, side projekty)',
+                    'MySQL: migracje, złożone zapytania, optymalizacja zapytań, indeksy proste i złożone',
+                    'PHPUnit - podstawy testowania kodu PHP',
+                    'Logowanie błędów'
                 ]
             },
             {
                 title: 'Frontend',
                 icon: '🎨',
                 items: [
-                    'SCSS / SASS, Bootstrap 4/5',
-                    'Vanilla JS + jQuery dla UI i requestów',
-                    'Pixel perfect z Figmy',
+                    'SCSS / SASS',
+                    'Bootstrap 4/5',
+                    'Vanilla JS',
+                    'Wdrażanie projektów z Figmy czy Adobe XD',
                     'Obsługa DOM, interaktywne komponenty'
                 ]
             },
@@ -116,17 +123,20 @@ const siteContent = {
                     'Docker (compose, sieci, wolumeny)',
                     'Linux (Debian) – konfiguracja środowisk',
                     'Apache2, PHP, MySQL instalacje',
-                    'SSH, logi (Kibana), error handling'
+                    'SSH',
+                    'Kibana w celu znalezienia logów, diagnozowania błędów'
                 ]
             },
             {
                 title: 'Proces i narzędzia',
                 icon: '📌',
                 items: [
-                    'SCRUM (1-2 tyg. sprinty)',
-                    'Jira – grooming, backlog, statusy',
-                    'Code review, rozwiązywanie konfliktów Git',
-                    'Debug z xdebug i logami'
+                    'SCRUM - odbyłem kilka szkoleń',
+                    'Jira - tworzenie tablic, zadań, sprintów, backlog, wykresy',
+                    'Code review innych programistów',
+                    'Rozwiązywanie konfliktów Git',
+                    'Debugowanie z xdebug i logami',
+                    'Narzędzie cursor - edytor kodu z ai'
                 ]
             }
         ]
