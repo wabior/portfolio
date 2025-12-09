@@ -37,36 +37,38 @@ const siteContent = {
         items: [
             {
                 name: 'wfirma.pl',
-                period: 'produkt: megaaplikacja B2B',
+                period: 'Megaaplikacja do prowadzenia działalności gospodarczej, wystawiania faktur, rozliczania ZUS i podatków, zarządzania pracownikami, magazynem towaru.',
                 description:
-                    `Nowe funkcje (PIT kasowy, integracja 5ways.pl), bieżące utrzymanie, hotfixy produkcyjne. 
-                    Refaktoryzacja z PHP 7.4 do 8.2, porządkowanie przestrzeni nazw w dużym monolicie CakePHP.`,
+                    `Wdrażanie nowych funkcji systemu np. <a href="https://poradnikprzedsiebiorcy.pl/-kasowy-pit-dla-przedsiebiorcow-czym-jest" target="_blank" class="link">PIT kasowy</a>,
+                    <a href="https://5ways.pl" target="_blank" class="link">integracja 5ways.pl</a>. Bieżące utrzymanie czyli naprawa bugów, hotfixy produkcyjne. 
+                    Refaktoryzacja z PHP 7.4 do 8.2`,
                 tags: [
                     'CakePHP',
                     'PHP 8.2',
                     'MySQL',
-                    'Integracje',
-                    'Refactor',
-                    'Finanse/Podatki'
+                    'Integracje REST API',
+                    'Refactor'
                 ],
                 image:
                     'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80'
             },
             {
                 name: 'poradnikprzedsiebiorcy.pl',
-                period: 'UI z Figmy → produkcja',
+                period: 'Portal biznesowo - prawny z artykułami z zakresu księgowości, podatków, prawa, płac i ubezpieczeń.',
                 description:
-                    'Wdrożenie layoutu z Figmy, pixel perfect w SCSS i Bootstrap 5. Responsywność, komponentowe podejście, optymalizacja styli.',
+                    `Wdrożenie nogego projektu graficznego - przeniesienie layoutu z Figmy na kod frontendu, pixel perfect w SCSS i Bootstrap 5. Responsywność, komponentowe podejście, optymalizacja styli.
+                    Obsługa backendu costomowego CMS: edytor artykułow, zarządzanie kategoriami, menu, sekcji, widgetów, customowe sidebary.`,
                 tags: ['SCSS', 'Bootstrap 5', 'RWD', 'UI z Figmy'],
                 image:
                     'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80'
             },
             {
-                name: 'Ebooki i broszury – CMS',
-                period: 'Edytor treści + PDF do druku',
+                name: 'Broszuromat: ebooki i broszury',
+                link: 'https://biblio.ebookpoint.pl/wydawca/16/0/3/wydawnictwo-wins?jezyk=pl',
+                period: 'CMS do wielostronicowych broszur gotowych do druku i pobrania PDF.',
                 description:
-                    'CMS do wielostronicowych broszur gotowych do druku i pobrania PDF. Edytor tekstu i okładek, spis treści, bloki contentu (np. cytaty).',
-                tags: ['PHP', 'MySQL', 'CMS', 'PDF', 'Content tools'],
+                    'Zaprojektowanie i wykonanie customowego CMS zawierającego edytor tekstu i okładek, spis treści, bloki contentu (np. cytaty), w którym autor mógł wybierać wygląd broszury z predefiniowanych szablonów. Wymiary były dostosowane do wymagań drukarni.',
+                tags: ['PHP', 'MySQL', 'CMS', 'PDF', 'Docker'],
                 image:
                     'https://images.unsplash.com/photo-1523475472560-d2df97ec485c?auto=format&fit=crop&w=900&q=80'
             },

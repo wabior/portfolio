@@ -51,6 +51,7 @@ const populateProjects = (projects) => {
     setText('projekty-subtitle', projects.subtitle);
 
     const grid = document.getElementById('projects-grid');
+
     if (!grid) {
         return;
     }
@@ -60,7 +61,7 @@ const populateProjects = (projects) => {
             (p) => `
     <article class="card">
       <img src="${p.image}" alt="Projekt ${p.name}" loading="lazy" />
-      <h3><a href="https://${p.name}" class="link">${p.name}</a></h3>
+      <h3><a href="${p.link || `https://${p.name}`}" target="_blank" class="link">${p.name}</a></h3>
       <p><strong>${p.period}</strong></p>
       <p>${p.description}</p>
       <div>${renderPills(p.tags)}</div>
