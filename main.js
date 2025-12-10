@@ -224,19 +224,15 @@ const populateYoutube = async (youtube) => {
         grid.innerHTML = validVideos
             .map(
                 (v) => {
-                    const videoId = v.link.split('/').pop();
-                    const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+                    const thumbnailUrl = `https://img.youtube.com/vi/${v.link.split('/').pop()}/maxresdefault.jpg`;
                     return `
         <article class="card">
-          <div class="video-wrapper">
-            <iframe src="${embedUrl}"
-                    title="${v.title}"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    loading="lazy">
-            </iframe>
-          </div>
+          <a href="${v.link}" target="_blank" rel="noopener noreferrer" class="video-link">
+            <img src="${thumbnailUrl}" alt="${v.title}" loading="lazy" />
+            <div class="play-overlay">
+              <div class="play-button">▶</div>
+            </div>
+          </a>
           <h3>${v.title}</h3>
         </article>
       `;
