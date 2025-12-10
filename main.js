@@ -309,6 +309,7 @@ const enhanceAnchors = () => {
     });
 };
 
+
 const init = async (content) => {
     if (!content) {
         return;
