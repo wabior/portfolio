@@ -212,6 +212,68 @@ const siteContent = {
             }
         ]
     },
+    youtube: {
+        titleBadge: 'YouTube',
+        title: 'Mój kanał Youtube',
+        subtitle: 'Filmy z mojego kanału programistycznego – porady, tutoriale i przemyślenia.',
+        items: [
+            {
+                title: '',
+                description: '',
+                link: 'https://youtu.be/DvGWET6Fl8w'
+            },
+            {
+                title: '',
+                description: '',
+                link: 'https://youtu.be/vvOnOct0mYY'
+            },
+            {
+                title: '',
+                description: '',
+                link: 'https://youtu.be/W83l49Q4Plc'
+            },
+            {
+                title: '',
+                description: '',
+                link: 'https://youtu.be/OHS8gkZajCc'
+            },
+            {
+                title: '',
+                description: '',
+                link: 'https://youtu.be/oTHZBxR5Too'
+            },
+            {
+                title: '',
+                description: '',
+                link: 'https://youtu.be/JpiQCDnzv7Q'
+            },
+            {
+                title: '',
+                description: '',
+                link: 'https://youtu.be/O5vKsLC9y2I'
+            },
+            {
+                title: '',
+                description: '',
+                link: 'https://youtu.be/1lADUZNMBRI'
+            },
+            {
+                title: '',
+                description: '',
+                link: 'https://youtu.be/rJaDJir4TWc'
+            },
+            {
+                title: '',
+                description: '',
+                link: 'https://youtu.be/YlsjFSQ77jg'
+            },
+            {
+                title: '',
+                description: '',
+                link: 'https://youtu.be/6CTwMFGpGGM'
+            }
+        ]
+    },
     contact: {
         titleBadge: 'Kontakt',
         title: 'Porozmawiajmy',

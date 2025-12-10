@@ -164,6 +164,100 @@ const populateExtras = (extras) => {
         .join('');
 };
 
+// Funkcja do pobierania danych filmu z YouTube oEmbed API
+const fetchYouTubeData = async (videoId) => {
+    try {
+        const oembedUrl = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`;
+        const response = await fetch(oembedUrl);
+
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        return {
+            title: data.title,
+            description: data.description ? data.description.substring(0, 150) + (data.description.length > 150 ? '...' : '') : null
+        };
+    } catch (error) {
+        console.warn(`Nie udało się pobrać danych dla ${videoId}:`, error.message);
+        return {
+            title: `Film ${videoId}`,
+            description: 'Opis niedostępny'
+        }; // fallback
+    }
+};
+
+const populateYoutube = async (youtube) => {
+    setText('youtube-badge', youtube.titleBadge);
+    setText('youtube-title', youtube.title);
+    setText('youtube-subtitle', youtube.subtitle);
+
+    const grid = document.getElementById('youtube-grid');
+    if (!grid) {
+        return;
+    }
+
+    // Pokaż loading state
+    grid.innerHTML = '<div class="loading">Ładowanie filmów...</div>';
+
+    try {
+        // Pobierz prawdziwe dane dla wszystkich filmów
+        const videosWithData = await Promise.all(
+            youtube.items.map(async (v) => {
+                const videoId = v.link.split('/').pop();
+                try {
+                    const realData = await fetchYouTubeData(videoId);
+                    return {
+                        ...v,
+                        title: realData.title,
+                        description: realData.description || v.description // użyj opisu z API lub z data.js
+                    };
+                } catch (error) {
+                    console.warn(`Pominięto film ${videoId} z powodu błędu:`, error.message);
+                    return null; // oznacz film do pominięcia
+                }
+            })
+        );
+
+        // Filtruj filmy które się udało pobrać (bez null)
+        const validVideos = videosWithData.filter(v => v !== null);
+
+        if (validVideos.length === 0) {
+            grid.innerHTML = '<div class="error">Brak dostępnych filmów z YouTube</div>';
+            return;
+        }
+
+        grid.innerHTML = validVideos
+            .map(
+                (v) => {
+                    const videoId = v.link.split('/').pop();
+                    const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+                    return `
+        <article class="card">
+          <div class="video-wrapper">
+            <iframe src="${embedUrl}"
+                    title="${v.title}"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    loading="lazy">
+            </iframe>
+          </div>
+          <h3>${v.title}</h3>
+          <p>${v.description}</p>
+        </article>
+      `;
+                }
+            )
+            .join('');
+    } catch (error) {
+        console.error('Błąd ładowania sekcji YouTube:', error);
+        grid.innerHTML = '<div class="error">Błąd ładowania filmów z YouTube</div>';
+    }
+};
+
 const populateContact = (contact) => {
     setText('kontakt-badge', contact.titleBadge);
     setText('kontakt-title', contact.title);
@@ -224,7 +318,7 @@ const enhanceAnchors = () => {
     });
 };
 
-const init = (content) => {
+const init = async (content) => {
     if (!content) {
         return;
     }
@@ -235,6 +329,7 @@ const init = (content) => {
     populateExperience(content.experience);
     populateEducation(content.education);
     populateExtras(content.extras);
+    await populateYoutube(content.youtube);
     populateContact(content.contact);
     populateFooter(content.meta);
     enhanceAnchors();
