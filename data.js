@@ -216,62 +216,19 @@ const siteContent = {
         titleBadge: 'YouTube',
         title: 'Mój kanał Youtube',
         subtitle: 'Filmy z mojego kanału programistycznego – porady, tutoriale i przemyślenia.',
-        items: [
-            {
-                title: '',
-                description: '',
-                link: 'https://youtu.be/DvGWET6Fl8w'
-            },
-            {
-                title: '',
-                description: '',
-                link: 'https://youtu.be/vvOnOct0mYY'
-            },
-            {
-                title: '',
-                description: '',
-                link: 'https://youtu.be/W83l49Q4Plc'
-            },
-            {
-                title: '',
-                description: '',
-                link: 'https://youtu.be/OHS8gkZajCc'
-            },
-            {
-                title: '',
-                description: '',
-                link: 'https://youtu.be/oTHZBxR5Too'
-            },
-            {
-                title: '',
-                description: '',
-                link: 'https://youtu.be/JpiQCDnzv7Q'
-            },
-            {
-                title: '',
-                description: '',
-                link: 'https://youtu.be/O5vKsLC9y2I'
-            },
-            {
-                title: '',
-                description: '',
-                link: 'https://youtu.be/1lADUZNMBRI'
-            },
-            {
-                title: '',
-                description: '',
-                link: 'https://youtu.be/rJaDJir4TWc'
-            },
-            {
-                title: '',
-                description: '',
-                link: 'https://youtu.be/YlsjFSQ77jg'
-            },
-            {
-                title: '',
-                description: '',
-                link: 'https://youtu.be/6CTwMFGpGGM'
-            }
+        videoLinks: [
+            'https://youtu.be/DvGWET6Fl8w',
+            'https://youtu.be/vvOnOct0mYY',
+            'https://youtu.be/W83l49Q4Plc',
+            'https://youtu.be/OHS8gkZajCc',
+            'https://youtu.be/oTHZBxR5Too',
+            'https://youtu.be/JpiQCDnzv7Q',
+            'https://youtu.be/O5vKsLC9y2I',
+            'https://youtu.be/1lADUZNMBRI',
+            'https://youtu.be/rJaDJir4TWc',
+            'https://youtu.be/YlsjFSQ77jg',
+            'https://youtu.be/6CTwMFGpGGM',
+            'https://youtu.be/Phmqn-9bGeU'
         ]
     },
     contact: {

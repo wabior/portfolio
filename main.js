@@ -164,8 +164,8 @@ const populateExtras = (extras) => {
         .join('');
 };
 
-// Funkcja do pobierania danych filmu z YouTube oEmbed API
-const fetchYouTubeData = async (videoId) => {
+// Funkcja do pobierania tytułu filmu z YouTube oEmbed API
+const fetchYouTubeTitle = async (videoId) => {
     try {
         const oembedUrl = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`;
         const response = await fetch(oembedUrl);
@@ -175,17 +175,10 @@ const fetchYouTubeData = async (videoId) => {
         }
 
         const data = await response.json();
-
-        return {
-            title: data.title,
-            description: data.description ? data.description.substring(0, 150) + (data.description.length > 150 ? '...' : '') : null
-        };
+        return data.title;
     } catch (error) {
-        console.warn(`Nie udało się pobrać danych dla ${videoId}:`, error.message);
-        return {
-            title: `Film ${videoId}`,
-            description: 'Opis niedostępny'
-        }; // fallback
+        console.warn(`Nie udało się pobrać tytułu dla ${videoId}:`, error.message);
+        throw error; // rzuć błąd zamiast zwracać fallback
     }
 };
 
@@ -203,16 +196,15 @@ const populateYoutube = async (youtube) => {
     grid.innerHTML = '<div class="loading">Ładowanie filmów...</div>';
 
     try {
-        // Pobierz prawdziwe dane dla wszystkich filmów
-        const videosWithData = await Promise.all(
-            youtube.items.map(async (v) => {
-                const videoId = v.link.split('/').pop();
+        // Pobierz tytuły dla wszystkich filmów
+        const videosWithTitles = await Promise.all(
+            youtube.videoLinks.map(async (link) => {
+                const videoId = link.split('/').pop();
                 try {
-                    const realData = await fetchYouTubeData(videoId);
+                    const title = await fetchYouTubeTitle(videoId);
                     return {
-                        ...v,
-                        title: realData.title,
-                        description: realData.description || v.description // użyj opisu z API lub z data.js
+                        link: link,
+                        title: title
                     };
                 } catch (error) {
                     console.warn(`Pominięto film ${videoId} z powodu błędu:`, error.message);
@@ -222,7 +214,7 @@ const populateYoutube = async (youtube) => {
         );
 
         // Filtruj filmy które się udało pobrać (bez null)
-        const validVideos = videosWithData.filter(v => v !== null);
+        const validVideos = videosWithTitles.filter(v => v !== null);
 
         if (validVideos.length === 0) {
             grid.innerHTML = '<div class="error">Brak dostępnych filmów z YouTube</div>';
@@ -246,7 +238,6 @@ const populateYoutube = async (youtube) => {
             </iframe>
           </div>
           <h3>${v.title}</h3>
-          <p>${v.description}</p>
         </article>
       `;
                 }
