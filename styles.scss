@@ -4,7 +4,7 @@ $muted: #94a3b8;
 $accent: #22d3ee;
 $accent-2: #a855f7;
 $text: #e2e8f0;
-$border: #1f2937;
+$border: #314055;
 $shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
 
 * { box-sizing: border-box; }
@@ -114,7 +114,7 @@ body.page {
   }
 
   &__card {
-    background: rgba(17, 24, 39, 0.8);
+    background-color: #1d2b4e;
     border: 1px solid $border;
     border-radius: 18px;
     padding: 20px;
@@ -215,7 +215,7 @@ body.page {
 }
 
 .card {
-  background: rgba(17, 24, 39, 0.8);
+  background-color: #1d2b4e;
   border: 1px solid $border;
   border-radius: 18px;
   padding: 20px;
